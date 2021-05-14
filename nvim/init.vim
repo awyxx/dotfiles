@@ -20,16 +20,23 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'othree/html5.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'chrisbra/Colorizer'
 
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'marko-cerovac/material.nvim'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""
 " 
 " STUFF
+
+colorscheme nord
 
 set clipboard+=unnamedplus "copy and paste from clipboard (needs xsel)
 set nocompatible    "do not make vim compatible with vi
@@ -44,7 +51,13 @@ set syntax=on       "syntax highlighting
 set nocindent       "disable auto indentation
 set tabstop=4       "how many spaces when using tab
 set shiftwidth=4    "number of space characters inserted for indentation
+set autochdir       "set dir to current
 set encoding=utf-8	" 
+set termguicolors
+
+filetype indent on
+set filetype=html         
+set smartindent
 
 """""""""""""""""""""""""""""""""""""""""
 "
@@ -53,8 +66,8 @@ set encoding=utf-8	"
 "select all
 map <C-a> <esc>ggVG<CR>
 
-"nerdtree
-nnoremap <C-d> :NERDTreeToggle<CR>
+"nerdtree (current dir)
+nnoremap <C-d> :NERDTreeToggle %<CR>
 
 "fzf (search for files with side preview)
 map <C-f> :Files<CR>
@@ -81,6 +94,13 @@ noremap <silent> <C-q> :Bclose!<CR>
 """""""""""""""""""""""""""""""""""""""""
 "
 " PLUGINS CONFIGURATIONS
+
+"theme
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+"discord presence 
+let g:presence_neovim_image_text = "nerd text editor"
 
 "coc - use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -156,14 +176,7 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
-
 let g:presence_log_level = "debug"
-
-"theme settings
-let g:tokyodark_enable_italic_comment = 1
-let g:tokyodark_enable_italic = 1
-let g:tokyodark_color_gamma = "1.0"
-colorscheme tokyodark
 
 
 """"""""""""""""""""""""""""
