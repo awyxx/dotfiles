@@ -15,6 +15,6 @@ desktop: endeavour
 
 ### fonts:
 - ttf-jetbrains-mono 
-- ttf-fira-mon
+- ttf-fira-mono
 
 *trying out sway on laptop, might add dotfiles for that l8r*
