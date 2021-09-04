@@ -8,7 +8,7 @@ desktop: endeavour
 - i3status 
 - neovim
 - dmenu 
-- volumeicono
+- volumeicon
 - maim
 - scrot
 - xclip
