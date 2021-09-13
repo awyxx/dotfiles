@@ -71,20 +71,26 @@ map <C-a> <esc>ggVG<CR>
 nmap <C-t> :NERDTreeToggle<CR>
 nmap <C-f> :NERDTreeFind<CR>
 map <C-d> :NERDTreeToggle %<CR>
+
+"see full hint message
+nnoremap <silent> g? <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 "}}}
 
 " stuff " {{{
+filetype plugin indent on
 set number		"line count
 set mouse=a		"use mouse (cursed)
 set wildoptions=pum 	"vim cmd completion (:)
-set pumblend=25		"vim cmd completion transparency
+set pumblend=15		"vim cmd completion transparency
 set foldmethod=marker   "folding stuff
 set foldlevel=0		"folding stuff
 set clipboard=unnamedplus "copypasting
 set noshowmode		"disable -- insert --
+set textwidth=75	"max chars line
 
 "not sure if this works when vim opens
 let g:colorizer_auto_color = 1
+
 "}}}
 
 " lsp and auto completion " {{{ 
@@ -95,7 +101,7 @@ local lsp = require('lspconfig')
 lsp.ccls.setup { on_attach = require('completion').on_attach }
 
 -- rust
-lsp.rust_analyzer.setup{ on_attach = require('completion').on_attach }
+lsp.rust_analyzer.setup { on_attach = require('completion').on_attach }
 
 -- ts
 lsp.tsserver.setup { on_attach = require('completion').on_attach  }
