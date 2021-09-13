@@ -1,5 +1,5 @@
 # my desktop/laptop dotfiles
-laptop: arch
+laptop: arch <br>
 desktop: endeavour
 
 ### stuff:
@@ -8,13 +8,16 @@ desktop: endeavour
 - i3status 
 - neovim
 - dmenu 
-- volumeicono
+- volumeicon
 - maim
 - scrot
 - xclip
+- feh
 
 ### fonts:
 - ttf-jetbrains-mono 
 - ttf-fira-mono
 
-*trying out sway on laptop, might add dotfiles for that l8r*
+### todo:
+- add sway dotfiles
+- install/setup script
