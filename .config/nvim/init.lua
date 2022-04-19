@@ -3,6 +3,12 @@
 
 -- some credits: https://idie.ru/posts/vim-modern-cpp
 
+-- theme
+vim.opt.background = "dark"
+vim.g.tokyonight_style = "night"
+vim.cmd([[colorscheme tokyonight]])
+
+--
 vim.cmd('set encoding=UTF-8')
 
 --
@@ -18,10 +24,6 @@ set expandtab
 
 --
 vim.o.completeopt="menuone,noinsert,noselect"
-
--- theme
-vim.opt.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
 
 -- line numbers
 vim.api.nvim_command('set number')

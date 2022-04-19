@@ -14,7 +14,7 @@ endfunction
 vim.api.nvim_command('au VimEnter * call vista#RunForNearestMethodOrFunction()')
 
 vim.g['lightline'] = {
-	colorscheme = 'gruvbox',
+	colorscheme = 'tokyonight',
 	active = {
 		left = { { 'mode', 'paste' }, { 'readonly', 'filename', 'modified' }, { 'current_function' } },
 		right = {
