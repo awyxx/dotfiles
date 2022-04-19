@@ -66,6 +66,7 @@ require('lightline')
 require('snippets')
 require('nerdtree')
 require('telescope')
+require('barbar')
 
 -- other plugins
 

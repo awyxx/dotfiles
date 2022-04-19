@@ -24,7 +24,8 @@ require('packer').startup(function()
 
     use 'tpope/vim-commentary' -- comment stuff
 
-    use 'preservim/nerdtree' --
+    use 'romgrk/barbar.nvim' -- tabs
+    use 'preservim/nerdtree' -- files
     use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
 
