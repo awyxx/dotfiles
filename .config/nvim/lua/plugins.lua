@@ -26,6 +26,11 @@ require('packer').startup(function()
 
 	use 'preservim/nerdtree' --
 	use 'ryanoasis/vim-devicons'
+    use 'kyazdani42/nvim-web-devicons'
+
+    use 'nvim-lua/popup.nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-telescope/telescope.nvim'
 
 	-- TODO: debug for c/cpp
 end)

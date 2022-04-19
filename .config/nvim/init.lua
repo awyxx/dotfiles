@@ -29,9 +29,8 @@ vim.api.nvim_command('set number')
 -- switching between source and header file
 vim.api.nvim_command('au BufEnter *.h  let b:fswitchdst = "c,cpp,cc,m"')
 vim.api.nvim_command('au BufEnter *.cc let b:fswitchdst = "h,hpp"')
--- use this in case of having src/ and include/
+-- use this in case of having src/ and include/ separated
 --vim.api.nvim_command('au BufEnter *.h let b:fswitchdst = \'c,cpp,m,cc\' | let b:fswitchlocs = \'reg:|include.*|src/**|\'')
-
 vim.api.nvim_command('nnoremap <silent> <A-o> :FSHere<cr>')
 -- " Extra hotkeys to open header/source in the split
 vim.api.nvim_command('nnoremap <silent> <localleader>oh :FSSplitLeft<cr>')
@@ -64,6 +63,7 @@ require('autocomplete')
 require('lightline')
 require('snippets')
 require('nerdtree')
+require('telescope')
 
 -- other plugins
 
