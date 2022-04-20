@@ -1,23 +1,7 @@
 # my desktop/laptop dotfiles
-laptop: arch <br>
-desktop: endeavour
 
-### stuff:
-- alacritty
-- i3-gaps 
-- i3status 
-- neovim
-- dmenu 
-- volumeicon
-- maim
-- scrot
-- xclip
-- feh
+### using endeavourOS on a thinkpad btw
 
-### fonts:
-- ttf-jetbrains-mono 
-- ttf-fira-mono
+### nvim
+<img src="https://github.com/roby2014/dotfiles/blob/main/prev/nvim.png?raw=true" />
 
-### todo:
-- add sway dotfiles
-- install/setup script
