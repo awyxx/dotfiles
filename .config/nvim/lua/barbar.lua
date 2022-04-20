@@ -16,7 +16,11 @@ map('n', '<space>5', ':BufferGoto 5<CR>', opts)
 -- no one uses more than 5 tabs, right?
 
 -- Close tab
-map('n', '<A-c>', ':BufferClose<CR>', opts)
+map('n', '<A-c>', ':BufferClose!<CR>', opts)
+
+-- fix for exiting terminal
+vim.cmd('tnoremap <Esc> <C-\\><C-n>:BufferClose!<CR>')
+
 
 -- Set barbar's options
 vim.g.bufferline = {

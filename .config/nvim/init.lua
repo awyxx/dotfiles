@@ -6,7 +6,10 @@
 -- theme
 vim.opt.background = "dark"
 vim.g.tokyonight_style = "night"
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[
+syntax on
+colorscheme tokyonight
+]])
 
 --
 vim.cmd('set encoding=UTF-8')
@@ -14,16 +17,36 @@ vim.cmd('set encoding=UTF-8')
 --
 vim.cmd([[
 filetype plugin indent on
+
 " show existing tab with 4 spaces width
 set tabstop=4
+
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
+
 " On pressing tab, insert 4 spaces
 set expandtab
+
+"stop auto commenting
+set formatoptions-=cro "doesnt work for some reason
+au BufEnter * set fo-=c fo-=r fo-=o
+
+"remove highlighting
+nnoremap <leader>nh :noh<CR>
+nnoremap <leader>noh :noh<CR>
+
+"open terminal buffer
+nnoremap <leader>t :term<CR>
+
+"highlight yanked stuff
+au TextYankPost * silent! lua vim.highlight.on_yank()
+
+"fix mouse
+set mouse=a
 ]])
 
 --
-vim.o.completeopt="menuone,noinsert,noselect"
+vim.o.completeopt = "menuone,noinsert,noselect"
 
 -- line numbers
 vim.api.nvim_command('set number')
